@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Dispositivo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'productos/css/styles.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Inventario</h1>
+        <nav class="nav">
+            <a href="#">Monitoreo</a>
+            <a href="#">Usuario</a>
+            <button class="btn iniciar">Iniciar</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="titulo">
+            <h2>Nuevo Dispositivo</h2>
+            <p class="usuario">Usuario — Enero 6, 2025</p>
+        </section>
+
+        <section class="formulario">
+            <h3>Información Básica</h3>
+            <form>
+                <div class="row">
+                    <select name="equipo" required>
+                        <option value="" disabled selected>Equipo</option>
+                        <option value="1">Equipo 1</option>
+                        <option value="2">Equipo 2</option>
+                    </select>
+                    <select name="estado" required>
+                        <option value="" disabled selected>Estado del equipo</option>
+                        <option value="nuevo">Nuevo</option>
+                        <option value="usado">Usado</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <select name="ubicacion" required>
+                        <option value="" disabled selected>Ubicación</option>
+                        <option value="bodega">Bodega</option>
+                        <option value="oficina">Oficina</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <input type="text" name="marca" placeholder="Marca" required>
+                    <input type="text" name="modelo" placeholder="Modelo" required>
+                    <input type="text" name="num_serie" placeholder="Num. Serie" required>
+                </div>
+                <div class="row">
+                    <textarea name="descripcion" placeholder="Descripción de configuración" rows="3"></textarea>
+                    <textarea name="parametros" placeholder="Parámetros Personalizados" rows="3"></textarea>
+                </div>
+                <div class="acciones">
+                    <button type="submit" class="btn guardar">Guardar</button>
+                    <button type="button" class="btn cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

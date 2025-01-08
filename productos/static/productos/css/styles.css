@@ -1,0 +1,234 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #ddd;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    color: #b30047;
+    font-weight: bold;
+}
+
+header .nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+header .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header .btn.iniciar {
+    background-color: #b30047;
+    color: #fff;
+}
+
+/* Main */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #b30047;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.titulo h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.titulo .usuario {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Formulario */
+.formulario h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+input, select, textarea {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn.guardar {
+    background-color: #b30047;
+    color: #fff;
+}
+
+.btn.cancelar {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+/* Ajustes generales para hacer el diseño más flexible */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Para los contenedores */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox dinámico */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Para que las columnas caigan a la siguiente fila si no caben */
+    gap: 1rem;
+}
+
+/* Input, Select y Textarea */
+input, select, textarea {
+    flex: 1 1 calc(50% - 1rem); /* Por defecto ocuparán 50% del ancho con espacio */
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Para textarea */
+textarea {
+    flex: 1 1 100%; /* Siempre ocupará el ancho completo */
+    resize: none;
+}
+
+/* Botones en móvil */
+.btn {
+    flex: 1 1 auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ------------------------------
+RESPONSIVE DESIGN
+------------------------------ */
+
+/* Dispositivos pequeños (smartphones: 480px o menos) */
+@media (max-width: 480px) {
+    .header {
+        flex-wrap: wrap; /* Permite que los elementos se apilen */
+        text-align: center;
+    }
+
+    .header .nav a {
+        display: block;
+        margin: 0.5rem 0; /* Espaciado entre enlaces */
+    }
+
+    .row {
+        flex-direction: column; /* Las columnas se apilan verticalmente */
+        gap: 0.5rem;
+    }
+
+    input, select, textarea {
+        flex: 1 1 100%; /* Ocuparán el 100% del ancho */
+        font-size: 0.9rem;
+    }
+
+    .acciones {
+        flex-direction: column; /* Botones apilados */
+        gap: 0.5rem;
+    }
+
+    .btn {
+        width: 100%; /* Botones ocupan todo el ancho */
+    }
+}
+
+/* Tablets (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Apilamos las columnas */
+        gap: 1rem;
+    }
+
+    input, select, textarea {
+        flex: 1 1 100%; /* Ocuparán el 100% del ancho */
+    }
+
+    .acciones {
+        flex-direction: column; /* Botones apilados */
+        gap: 1rem;
+    }
+}
+
